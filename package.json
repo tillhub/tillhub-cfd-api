@@ -1,6 +1,6 @@
 {
   "name": "@tillhub/cfd-api",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Tillhub Customer Facing Display API",
   "main": "dist/tillhub-cfd-api",
   "scripts": {
