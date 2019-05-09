@@ -1,0 +1,80 @@
+{
+  "name": "@tillhub/cfd-api",
+  "version": "0.1.0",
+  "description": "Tillhub Customer Facing Display API",
+  "main": "dist/tillhub-cfd-api",
+  "scripts": {
+    "build": "rollup -c",
+    "commit": "git-cz",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "semantic-release": "semantic-release",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert Ende <robert.ende@tillhub.de>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tillhub/tillhub-cfd-api.git"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@tillhub/schemas": "^2.175.0",
+    "ajv": "^6.10.0",
+    "custom-event-polyfill": "^1.0.7",
+    "event-target-shim": "^5.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/exec": "^3.3.2",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "^5.2.10",
+    "@semantic-release/npm": "^5.1.7",
+    "commitizen": "^3.1.1",
+    "core-js": "^3.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "rollup": "^1.11.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "semantic-release": "^15.13.13"
+  },
+  "release": {
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ],
+    "prepare": [
+      "@semantic-release/npm",
+      "@semantic-release/changelog",
+      {
+        "path": "@semantic-release/git",
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    "publish": [
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 9",
+    "safari >= 8",
+    "iOS >= 8"
+  ]
+}
