@@ -49,7 +49,7 @@
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^4.2.3",
-    "semantic-release": "^15.13.13"
+    "semantic-release": "^17.2.3"
   },
   "release": {
     "verifyConditions": [
