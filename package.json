@@ -19,7 +19,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@tillhub/schemas": "^2.175.0",
-    "ajv": "^6.10.0",
+    "ajv": "^6.12.3",
     "custom-event-polyfill": "^1.0.7",
     "event-target-shim": "^5.0.1"
   },
